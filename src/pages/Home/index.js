@@ -4,7 +4,7 @@ import { MdAddShoppingCart } from 'react-icons/md';
 import api from '../../services/api';
 import { formatPrice } from '../../util/format';
 
-import { addProductToCart } from '../../store/modules/cart/actions';
+import { addProductToCartRequest } from '../../store/modules/cart/actions';
 
 import { ProductList } from './styles';
 
@@ -36,7 +36,7 @@ function Home() {
   }, []);
 
   function handleAddProductToCart(product) {
-    dispatch(addProductToCart(product));
+    dispatch(addProductToCartRequest(product.id));
   }
 
   return (

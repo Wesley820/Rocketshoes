@@ -4,7 +4,7 @@ import { formatPrice } from '../../util/format';
 
 import {
   removeFromCart,
-  updateProductAmount,
+  updateProductAmountRequest,
 } from '../../store/modules/cart/actions';
 
 import {
@@ -38,11 +38,11 @@ function Cart() {
   }
 
   function handleIncrementProductAmount({ id, amount }) {
-    dispatch(updateProductAmount(id, amount + 1));
+    dispatch(updateProductAmountRequest(id, amount + 1));
   }
 
   function handleDecrementProductAmount({ id, amount }) {
-    dispatch(updateProductAmount(id, amount - 1));
+    dispatch(updateProductAmountRequest(id, amount - 1));
   }
 
   return (
